@@ -1,131 +1,189 @@
-/*Estilo global para el fondo*/
-body{
-    background-color: #FFF1E6;
-    margin: 0; 
-    padding: 0;
-    font-family: "Special Elite", monospace;
-    cursor: none;
+/* ------------------- */
+/* RESET */
+/* ------------------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-h1 {
-    font-family: "Alfa Slab One";
-    font-weight: 200;
-    font-size: 110px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    line-height: 110px;
+body{
+    background:#FFF1E6;
+    font-family:"Special Elite", monospace;
+    cursor:none;
+}
+
+/* ------------------- */
+/* TIPOGRAFÍA */
+/* ------------------- */
+
+h1{
+    font-family:"Alfa Slab One";
+    font-size:110px;
+    line-height:1;
+    margin-bottom:25px;
 }
 
 h3{
-    font-family: "Josefin Slab";
-    font-weight: 300;
-    font-size: 50px;
-    margin-bottom: 0;
+    font-family:"Josefin Slab";
+    font-size:50px;
+    font-weight:300;
+    margin-bottom:15px;
 }
 
 p{
-    padding-top:10px;
-    padding-right: 900px;
-    font-size: 16px;
-    font-weight: 1px;
-    line-height: 22px;
+    font-size:16px;
+    line-height:1.7;
 }
 
-.hero{
-    padding-top: 150px;
-    padding-left: 250px;
-    padding-right: 200px;
+/* ------------------- */
+/* SECCIONES */
+/* ------------------- */
+
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:150px 40px;
 }
 
-.about p {
-    padding-right: 100px;
-    max-width: 1000px;
+/* ------------------- */
+/* HERO */
+/* ------------------- */
+
+.hero p{
+    max-width:650px;
 }
 
-.about-text {
-    width: 900px;
-    padding-top: 300px;
-    padding-left: 250px;
+/* ------------------- */
+/* ABOUT */
+/* ------------------- */
+
+.about-text{
+    max-width:900px;
 }
 
-.about-image {
-    width: 450px;
-    display: block;
-    margin-left: auto;
-    margin-top: 60px;
+.about p{
+    max-width:700px;
 }
 
-.feedback{
-    padding-top: 300px;
-    padding-left: 400px;
-    padding-right: 200px;
+.about-image{
+    width:450px;
+    max-width:100%;
+    display:block;
+    margin-left:auto;
+    margin-top:60px;
 }
 
-.method{
-    padding-top: 300px;
-    padding-left: 300px;
-    padding-right: 100px;
-    padding-bottom: 300px;
+/* ------------------- */
+/* FEEDBACK */
+/* ------------------- */
+
+.feedback p{
+    max-width:700px;
 }
+
+/* ------------------- */
+/* METHOD */
+/* ------------------- */
 
 .method p{
-    max-width: 6000px;
+    max-width:700px;
 }
 
-.contact{
-    margin-left: 600px;
-}
+/* ------------------- */
+/* CONTACT */
+/* ------------------- */
 
 .contact-info{
-    margin-left: 710px;
-    margin-top:100px;
-    margin-bottom: 300px;
+    margin-top:70px;
+}
 
+.contact-info p{
+    margin-bottom:18px;
 }
 
 .btn-linkedin{
-    display: inline-block;
-    margin-top: 0px;
-    padding-left: 110px;
-    padding: 4px 7px;
-    border: 1px ridge #ff3c00;
-    border-radius: 0px;
-    color: #ff3c00;
-    text-decoration: none;
-    font-family: 'Geist Mono', monospace;
-    font-size: 12px;
-    transition: all 0.2s ease;
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 14px;
+    border:1px solid #ff3c00;
+    color:#ff3c00;
+    text-decoration:none;
+    font-size:13px;
+    transition:.25s;
 }
 
 .btn-linkedin:hover{
-    background-color: #ff3c00;
+    background:#ff3c00;
     color:#FFF1E6;
 }
 
-.cursor {
-    position: fixed;
-    width: 14px;
-    height: 14px;
-    background-color: #ff3c00;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
+/* ------------------- */
+/* CURSOR */
+/* ------------------- */
+
+.cursor{
+    position:fixed;
+    width:14px;
+    height:14px;
+    background:#ff3c00;
+    pointer-events:none;
+    transform:translate(-50%,-50%);
+    z-index:9999;
 }
 
-.cursor.active {
-    transform: translate(-50%, -50%) scale(2);
+.cursor.active{
+    transform:translate(-50%,-50%) scale(2);
 }
 
-.blink {
-    animation: blink 1s infinite;
+/* ------------------- */
+/* PUNTO PARPADEANTE */
+/* ------------------- */
+
+.blink{
+    animation:blink 1s infinite;
 }
 
-@keyframes blink {
-    0%, 40% {
-        opacity: 1;
+@keyframes blink{
+
+    0%,40%{
+        opacity:1;
     }
 
-    50%, 100% {
-        opacity: 0;
+    50%,100%{
+        opacity:0;
     }
+
+}
+
+/* ------------------- */
+/* RESPONSIVE */
+/* ------------------- */
+
+@media (max-width:900px){
+
+    section{
+        padding:80px 25px;
+    }
+
+    h1{
+        font-size:60px;
+        line-height:1.05;
+    }
+
+    h3{
+        font-size:32px;
+    }
+
+    p{
+        font-size:15px;
+    }
+
+    .about-image{
+        margin:50px auto 0;
+        width:100%;
+        max-width:380px;
+    }
+
 }
